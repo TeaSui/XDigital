@@ -1,0 +1,16 @@
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
+      # Routes are now defined programmatically in RouteConfig class
+      # This prevents environment variable interpolation issues with RewritePath filters
+
+logging:
+  level:
+    root: INFO
+    org.springframework.cloud.gateway: DEBUG
+    org.springframework.web: INFO
+    com.rag.apigateway: DEBUG
